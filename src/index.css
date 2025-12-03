@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* COLORI */
+
+.colorPrim {
+  color: #aaa232;
+}
+
+.colorSec {
+  color: #0077bc;
+}
+
+.bgPrim {
+  background-color: #aaa232;
+}
+
+.bgSec {
+  background-color: #0077bc;
+}
+
+/* IMPOSTAZIONI GLOBALI */
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.style-layout-system {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.style-main-content {
+  flex: 1;
+  padding: 2rem;
+  padding-inline: 7rem;
+  margin-top: 10px;
+}
+
