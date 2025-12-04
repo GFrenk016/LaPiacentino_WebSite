@@ -18,6 +18,20 @@
   background-color: #0077bc;
 }
 
+/* GRANDEZZE CUSTOM */
+
+.customSize {
+  width: 55vw;
+}
+
+.customTextSize {
+  font-size: 3.5rem;
+}
+
+.customTextSize2 {
+  font-size: 1.7rem;
+}
+
 /* IMPOSTAZIONI GLOBALI */
 
 :root {
