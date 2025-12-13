@@ -7,7 +7,7 @@ export default function Header() {
     const navLinks = [
         { label: "Home", href: "#" },
         { label: "Servizi", href: "#services" },
-        { label: "Portfolio", href: "#portfolio" },
+        { label: "Chi siamo", href: "#portfolio" },
         { label: "Contatti", href: "#contact" },
     ];
 
@@ -69,23 +69,23 @@ export default function Header() {
             {/* Mobile nav */}
             {isOpen && (
                 <div className="border-t border-slate-200 bg-white md:hidden">
-                <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3 text-sm font-medium text-slate-700">
-                    {navLinks.map((link) => (
-                    <a
-                        key={link.href}
-                        href={link.href}
-                        className="rounded-lg px-2 py-2 transition hover:bg-slate-100"
-                    >
-                        {link.label}
-                    </a>
-                    ))}
-                    <a
-                    href="#cta"
-                    className="mt-2 rounded-full border border-indigo-600 bg-indigo-600 px-4 py-2 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700"
-                    >
-                    Inizia ora
-                    </a>
-                </nav>
+                    <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3 text-sm font-medium text-slate-700">
+                        {navLinks.map((link) => (
+                        <a
+                            key={link.href}
+                            href={link.href}
+                            className="rounded-lg px-2 py-2 transition hover:bg-slate-100"
+                        >
+                            {link.label}
+                        </a>
+                        ))}
+                        <a
+                        href="#cta"
+                        className="mt-2 rounded-full border border-indigo-600 bg-indigo-600 px-4 py-2 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700"
+                        >
+                        Inizia ora
+                        </a>
+                    </nav>
                 </div>
             )}
         </header>

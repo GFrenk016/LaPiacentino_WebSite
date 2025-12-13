@@ -18,6 +18,10 @@
   background-color: #0077bc;
 }
 
+.backgroundSlider {
+  backdrop-filter: blur(10px);
+}
+
 /* GRANDEZZE CUSTOM */
 
 .customSize {
