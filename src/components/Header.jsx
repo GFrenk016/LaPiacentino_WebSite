@@ -5,17 +5,19 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     const navLinks = [
-        { label: "Home", href: "#" },
-        { label: "Servizi", href: "#services" },
-        { label: "Chi siamo", href: "#portfolio" },
+        { label: "Home", href: "/" },
+        { label: "Servizi", href: "/servizi" },
+        { label: "Chi siamo", href: "/chi-siamo" },
         { label: "Contatti", href: "#contact" },
+        { label: "Blog", href: "#" },
+        { label: "Networking", href: "#" },
     ];
 
     return (
         <header className="w-full border-b border-slate-200 bg-white/80 backdrop-blur sticky top-0 z-50">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:py-4">
                 {/* Logo */}
-                <a href="#" className="flex items-center gap-2">
+                <a href="/" className="flex items-center gap-2">
                     <img src={logo} alt="Logo" className="w-60" />
                 </a>
 
@@ -31,12 +33,6 @@ export default function Header() {
                     </a>
                 ))}
 
-                <a
-                    href="#cta"
-                    className="rounded-full bgPrim px-5 py-3 text-xl font-semibold text-white shadow-sm transition"
-                >
-                    Inizia ora
-                </a>
                 </nav>
 
                 {/* Mobile button */}
@@ -79,12 +75,6 @@ export default function Header() {
                             {link.label}
                         </a>
                         ))}
-                        <a
-                        href="#cta"
-                        className="mt-2 rounded-full border border-indigo-600 bg-indigo-600 px-4 py-2 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700"
-                        >
-                        Inizia ora
-                        </a>
                     </nav>
                 </div>
             )}

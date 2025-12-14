@@ -15,7 +15,7 @@ export default function Homepage() {
                 <motion.img src={Logo} alt="Logo" className="customSize" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} />
 
                 <motion.h1 className="mt-8 customTextSize font-semibold leading-tight text-white" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-                    Lorem ipsum dolor.
+                    
                 </motion.h1>
 
                 <motion.button 
@@ -51,7 +51,7 @@ export default function Homepage() {
                 </motion.h2>
 
                 <motion.p
-                className="customTextSize2 text-neutral-300 leading-relaxed max-w-3xl"
+                className="customTextSize2 colorPrim leading-relaxed max-w-3xl"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -176,7 +176,7 @@ export default function Homepage() {
                         Inizia oggi la tua avventura
                     </h2>
 
-                    <p className="customTextSize2 text-neutral-300 leading-relaxed my-10">
+                    <p className="customTextSize2 colorPrim leading-relaxed my-10">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate corrupti molestias placeat odio tempora possimus, necessitatibus sit repudiandae aspernatur ducimus.
                     </p>
 
