@@ -8,9 +8,9 @@ export default function Header() {
         { label: "Home", href: "/" },
         { label: "Servizi", href: "/servizi" },
         { label: "Chi siamo", href: "/chi-siamo" },
-        { label: "Contatti", href: "#contact" },
-        { label: "Blog", href: "#" },
-        { label: "Networking", href: "#" },
+        { label: "Contatti", href: "/contatti" },
+        { label: "Blog", href: "/blog" },
+        { label: "Networking", href: "/networking" },
     ];
 
     return (

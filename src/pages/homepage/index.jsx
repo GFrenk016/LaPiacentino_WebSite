@@ -14,8 +14,8 @@ export default function Homepage() {
 
                 <motion.img src={Logo} alt="Logo" className="customSize" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} />
 
-                <motion.h1 className="mt-8 customTextSize font-semibold leading-tight text-white" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-                    
+                <motion.h1 className="mt-8 customTextSize font-semibold leading-tight colorPrim" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
+                    Punto di riferimento per chi vuole crescere e scegliere con consapevolezza
                 </motion.h1>
 
                 <motion.button 
