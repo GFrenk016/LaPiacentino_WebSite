@@ -1,28 +1,50 @@
 import logo from "../assets/logo.png";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-black/10 border-t border-white/10 mt-20">
-            <div className="px-6 py-14 max-w-6xl mx-auto flex flex-col items-center gap-6 text-center">
+        <footer className="w-full bg-black/10 border-t border-white/10 mt-24">
+            <div className="px-6 py-16 max-w-6xl mx-auto flex flex-col items-center text-center gap-8">
 
-                {/* Titolo / Brand */}
-                <img src={logo} alt="Logo" className="w-60" />
+                {/* Logo */}
+                <img src={logo} alt="LaPiacentino Logo" className="w-56" />
 
-                {/* Link di navigazione */}
-                <nav className="flex flex-col md:flex-row gap-4 mt-4">
-                    <a href="" className="colorPrim text-4xl"><FaFacebook /></a>
-                    <a href="" className="colorPrim text-4xl"><FaInstagram /></a>
-                    <a href="" className="colorPrim text-4xl"><FaLinkedin /></a>
-                </nav>
+                {/* Claim */}
+                <div className="space-y-2">
+                    <p className="text-2xl font-semibold colorSec">
+                        Un punto di contatto unico.
+                    </p>
+                    <p className="text-xl colorPrim">
+                        Il futuro del lavoro, oggi.
+                    </p>
+                </div>
 
-                {/* Linea divisoria */}
-                <div className="w-full h-px bg-white/10 my-4"></div>
+                {/* Social */}
+                <div className="flex gap-6 text-3xl mt-4">
+                    <a href="#" className="colorPrim hover:opacity-70 transition">
+                        <FaFacebook />
+                    </a>
+                    <a href="#" className="colorPrim hover:opacity-70 transition">
+                        <FaInstagram />
+                    </a>
+                    <a href="#" className="colorPrim hover:opacity-70 transition">
+                        <FaLinkedin />
+                    </a>
+                </div>
+
+                {/* Email */}
+                <a 
+                    href="mailto:info@lapIacentino.it" 
+                    className="text-lg colorSec hover:underline transition mt-4"
+                >
+                    info@lapIacentino.it
+                </a>
+
+                {/* Divider */}
+                <div className="w-full h-px bg-white/10 my-6"></div>
 
                 {/* Copyright */}
-                <p className="colorPrim text-lg">
+                <p className="colorPrim text-sm">
                     © {new Date().getFullYear()} LaPiacentino — Tutti i diritti riservati.
                 </p>
 

@@ -1,196 +1,173 @@
 import { motion } from "framer-motion";
 
 export default function Contatti() {
+
     const fadeUp = {
         initial: { opacity: 0, y: 40 },
         whileInView: { opacity: 1, y: 0 },
         viewport: { once: true, amount: 0.25 },
     };
 
-    const team = [
-        {
-        name: "Marco Verdi",
-        role: "Founder • Orientamento & Strategia",
-        email: "marco@lapiacentino.it",
-        img: "https://picsum.photos/400/400?random=11",
-        },
-        {
-        name: "Giulia Rossi",
-        role: "CV & Personal Branding",
-        email: "giulia@lapiacentino.it",
-        img: "https://picsum.photos/400/400?random=12",
-        },
-        {
-        name: "Luca Bianchi",
-        role: "Colloqui & Preparazione",
-        email: "luca@lapiacentino.it",
-        img: "https://picsum.photos/400/400?random=13",
-        },
-    ];
-
     const onSubmit = (e) => {
         e.preventDefault();
-        // TODO: collegare a backend (EmailJS, Formspree, Supabase, ecc.)
         alert("Messaggio inviato! (demo)");
     };
 
     return (
         <div className="min-h-screen w-full">
-        {/* HERO */}
-        <section className="w-full py-24 px-6">
-            <div className="max-w-6xl mx-auto text-center">
-            <motion.h1 className="customTextSize font-semibold leading-tight colorSec" {...fadeUp}>
-                Contatti
-            </motion.h1>
 
-            <motion.p
-                className="mt-8 customTextSize2 colorPrim max-w-3xl mx-auto leading-relaxed"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.8, delay: 0.15 }}
-            >
-                Hai una domanda o vuoi iniziare un percorso? Scrivici: ti rispondiamo con indicazioni chiare e il prossimo step.
-            </motion.p>
-            </div>
-        </section>
+            {/* HERO */}
+            <section className="w-full py-28 px-6 text-center">
+                <div className="max-w-4xl mx-auto">
 
-        {/* INFO + FORM */}
-        <section className="w-full pb-24 px-6">
-            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
-            {/* INFO BOX */}
-            <motion.div
-                className="p-10 rounded-2xl bg-white/5 border border-white/10 backdrop-blur"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.8 }}
-            >
-                <h2 className="text-2xl font-semibold colorSec">Info rapide</h2>
-
-                <div className="mt-6 space-y-4 text-neutral-300 text-lg">
-                    <p>
-                        <span className="colorSec font-semibold">Email:</span>{" "}
-                        <a className="colorPrim hover:underline" href="mailto:info@lapiacentino.it">
-                        info@lapiacentino.it
-                        </a>
-                    </p>
-                    <p>
-                        <span className="colorSec font-semibold">Telefono:</span>{" "}
-                        <a className="colorPrim hover:underline" href="tel:+390000000000">
-                        +39 000 000 0000
-                        </a>
-                    </p>
-                </div>
-
-                <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                    <a
-                        className="rounded-lg bgPrim px-8 py-4 text-lg font-semibold text-white hover:opacity-90 transition text-center"
-                        href="mailto:info@lapiacentino.it"
+                    <motion.h1 
+                        className="customTextSize font-semibold colorSec"
+                        {...fadeUp}
                     >
-                        Scrivi una mail
-                    </a>
-                </div>
-            </motion.div>
+                        Parliamone.
+                    </motion.h1>
 
-            {/* FORM */}
-            <motion.form
-                onSubmit={onSubmit}
-                className="p-10 rounded-2xl bg-white/5 border border-white/10 backdrop-blur"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-            >
-                <h2 className="text-2xl font-semibold colorSec">Invia un messaggio</h2>
-
-                <div className="mt-8 grid gap-5">
-                <div>
-                    <label className="colorSec text-sm">Nome</label>
-                    <input
-                    type="text"
-                    required
-                    placeholder="Il tuo nome"
-                    className="mt-2 w-full rounded-lg bg-black/20 border border-white/10 px-4 py-3 text-white outline-none focus:border-white/30"
-                    />
-                </div>
-
-                <div>
-                    <label className="colorSec text-sm">Email</label>
-                    <input
-                    type="email"
-                    required
-                    placeholder="nome@email.com"
-                    className="mt-2 w-full rounded-lg bg-black/20 border border-white/10 px-4 py-3 text-white outline-none focus:border-white/30"
-                    />
-                </div>
-
-                <div>
-                    <label className="colorSec text-sm">Messaggio</label>
-                    <textarea
-                    required
-                    rows={5}
-                    placeholder="Scrivi qui il tuo messaggio..."
-                    className="mt-2 w-full rounded-lg bg-black/20 border border-white/10 px-4 py-3 text-white outline-none focus:border-white/30 resize-none"
-                    />
-                </div>
-
-                <button
-                    type="submit"
-                    className="mt-2 rounded-lg bgPrim px-8 py-4 text-lg font-semibold text-white hover:opacity-90 transition"
-                >
-                    Invia
-                </button>
-                </div>
-            </motion.form>
-            </div>
-        </section>
-
-        {/* TEAM */}
-        <section className="w-full py-24 px-6">
-            <div className="max-w-6xl mx-auto">
-            <motion.h2 className="text-3xl font-semibold colorSec text-center" {...fadeUp}>
-                Il nostro team
-            </motion.h2>
-
-            <motion.p
-                className="mt-6 customTextSize2 colorPrim max-w-3xl mx-auto text-center"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.8, delay: 0.15 }}
-            >
-                Persone reali, supporto pratico. Qui trovi i profili e i riferimenti principali.
-            </motion.p>
-
-            <div className="mt-16 grid md:grid-cols-3 gap-10">
-                {team.map((p, i) => (
-                <motion.div
-                    key={p.email}
-                    className="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur"
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.2 }}
-                    transition={{ duration: 0.7, delay: i * 0.12 }}
-                >
-                    <img
-                    src={p.img}
-                    alt={p.name}
-                    className="w-full h-56 object-cover rounded-xl"
-                    />
-                    <h3 className="mt-6 text-xl font-semibold colorSec">{p.name}</h3>
-                    <p className="mt-2 colorPrim">{p.role}</p>
-                    <a
-                    href={`mailto:${p.email}`}
-                    className="mt-5 inline-block colorPrim hover:underline"
+                    <motion.p
+                        className="mt-8 customTextSize2 colorPrim leading-relaxed"
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.25 }}
+                        transition={{ duration: 0.8, delay: 0.15 }}
                     >
-                        {p.email}
-                    </a>
-                </motion.div>
-                ))}
-            </div>
-            </div>
-        </section>
+                        Hai un'esigenza, un progetto o vuoi entrare nella rete?
+                        Scrivici. Ti rispondiamo con chiarezza e il prossimo passo.
+                    </motion.p>
+
+                </div>
+            </section>
+
+            {/* COMING SOON / ATTESA */}
+            <section className="w-full py-12 px-6 bg-white/5 border-t border-white/10">
+                <div className="max-w-4xl mx-auto text-center">
+
+                    <motion.h2
+                        className="text-3xl font-semibold colorSec"
+                        {...fadeUp}
+                    >
+                        Stiamo costruendo una nuova sede.
+                    </motion.h2>
+
+                    <motion.div
+                        className="mt-10 space-y-6 customTextSize2 colorPrim leading-relaxed"
+                        {...fadeUp}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                    >
+                        <p>Un nuovo spazio.</p>
+                        <p>Un nuovo modo di lavorare insieme.</p>
+                        <p className="font-semibold colorSec">
+                            Il sito è solo l’inizio.
+                        </p>
+                    </motion.div>
+
+                    <motion.div
+                        className="mt-14 flex flex-col sm:flex-row justify-center gap-6"
+                        {...fadeUp}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                    >
+                        <a
+                            href="#"
+                            className="rounded-lg bgPrim px-10 py-4 text-lg font-semibold text-white hover:opacity-90 transition"
+                        >
+                            Seguici
+                        </a>
+
+                        <a
+                            href="#"
+                            className="rounded-lg bgPrim px-10 py-4 text-lg font-semibold text-white hover:opacity-90 transition"
+                        >
+                            Lasciaci un messaggio
+                        </a>
+                    </motion.div>
+
+                </div>
+            </section>
+
+            {/* FORM CENTRALE */}
+            <section className="w-full px-6 py-32">
+                <div className="max-w-3xl mx-auto">
+
+                    <motion.form
+                        onSubmit={onSubmit}
+                        className="p-12 rounded-3xl bg-white/5 border border-white/10 backdrop-blur"
+                        {...fadeUp}
+                    >
+                        <h2 className="text-2xl font-semibold colorSec text-center">
+                            Invia un messaggio
+                        </h2>
+
+                        <div className="mt-10 grid gap-6">
+
+                            <input
+                                type="text"
+                                required
+                                placeholder="Nome"
+                                className="w-full rounded-lg bg-black/20 border border-white/10 px-5 py-4 text-white outline-none focus:border-white/30"
+                            />
+
+                            <input
+                                type="email"
+                                required
+                                placeholder="Email"
+                                className="w-full rounded-lg bg-black/20 border border-white/10 px-5 py-4 text-white outline-none focus:border-white/30"
+                            />
+
+                            <textarea
+                                required
+                                rows={5}
+                                placeholder="Scrivi qui il tuo messaggio..."
+                                className="w-full rounded-lg bg-black/20 border border-white/10 px-5 py-4 text-white outline-none focus:border-white/30 resize-none"
+                            />
+
+                            <button
+                                type="submit"
+                                className="mt-4 rounded-lg bgPrim px-10 py-4 text-lg font-semibold text-white hover:opacity-90 transition"
+                            >
+                                Invia
+                            </button>
+                        </div>
+
+                    </motion.form>
+
+                </div>
+            </section>
+
+
+            {/* INFO RAPIDE */}
+            <section className="w-full px-6 pb-28">
+                <div className="max-w-4xl mx-auto text-center">
+
+                    <motion.h2 className="text-2xl font-semibold colorSec" {...fadeUp}>
+                        Info rapide
+                    </motion.h2>
+
+                    <motion.div
+                        className="mt-8 space-y-4 customTextSize2 colorPrim"
+                        {...fadeUp}
+                        transition={{ duration: 0.8, delay: 0.15 }}
+                    >
+                        <p>
+                            Email:{" "}
+                            <a href="mailto:info@lapiacentino.it" className="colorSec hover:underline">
+                                info@lapiacentino.it
+                            </a>
+                        </p>
+
+                        <p>
+                            Telefono:{" "}
+                            <a href="tel:+390000000000" className="colorSec hover:underline">
+                                +39 000 000 0000
+                            </a>
+                        </p>
+                    </motion.div>
+
+                </div>
+            </section>
+
         </div>
     );
 }
